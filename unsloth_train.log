@@ -1,0 +1,75 @@
+Base model : mlx-community/Qwen2.5-3B-Instruct-4bit
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 92748.74it/s]
+Unsloth: Loading mlx-community/Qwen2.5-3B-Instruct-4bit via mlx-lm...
+/Users/advaitsrivastava/unsloth312/lib/python3.12/site-packages/unsloth/__init__.py:88: UserWarning: Unsloth: 'mlx-community/Qwen2.5-3B-Instruct-4bit' is already quantized — using existing compatible MLX quantization.
+  return FastMLXModel.from_pretrained(*args, **kwargs)
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 64749.12it/s]
+Unsloth: LoRA applied — 29,933,568 trainable params (5.84% of 512,315,392 total)
+Train: 452  Valid: 57
+Unsloth: train_on_responses_only enabled (113 batches prepared).
+Starting Unsloth LoRA fine-tuning...
+Unsloth: MLX Metal memory guard enabled (memory_limit=4.87 GB, wired_limit=4.87 GB).
+Unsloth: Using gradient checkpointing to reduce memory.
+Unsloth: CCE using quantized matmul (group_size=64, bits=4)
+Unsloth: Using CCE loss (runtime-cce) for memory-efficient training.
+Unsloth: Eval enabled every 50 steps (15 eval batches).
+Unsloth: Training for 226 steps, BS=4, grad_accum=1, seq_len=640
+Unsloth: Features: CCE, GC, compile, LR=linear, opt=adamw
+  Step 5/226 | Loss: 2.5480 | Grad: 0.8219 | LR: 9.09e-05 | Tok/s: 48 | Peak: 3.53 GB
+  Step 10/226 | Loss: 2.2128 | Grad: 0.6926 | LR: 1.82e-04 | Tok/s: 44 | Peak: 3.71 GB
+  Step 15/226 | Loss: 2.1203 | Grad: 0.5542 | LR: 1.96e-04 | Tok/s: 45 | Peak: 3.71 GB
+  Step 20/226 | Loss: 2.0282 | Grad: 0.5529 | LR: 1.92e-04 | Tok/s: 43 | Peak: 3.71 GB
+  Step 25/226 | Loss: 2.0527 | Grad: 0.5830 | LR: 1.87e-04 | Tok/s: 37 | Peak: 3.71 GB
+  Step 30/226 | Loss: 1.9592 | Grad: 0.6990 | LR: 1.82e-04 | Tok/s: 40 | Peak: 3.71 GB
+  Step 35/226 | Loss: 1.8436 | Grad: 0.6900 | LR: 1.78e-04 | Tok/s: 44 | Peak: 3.71 GB
+  Step 40/226 | Loss: 1.8693 | Grad: 0.5751 | LR: 1.73e-04 | Tok/s: 44 | Peak: 3.71 GB
+  Step 45/226 | Loss: 1.9284 | Grad: 0.6180 | LR: 1.69e-04 | Tok/s: 41 | Peak: 3.71 GB
+  Step 50/226 | Loss: 1.6591 | Grad: 0.7908 | LR: 1.64e-04 | Tok/s: 41 | Peak: 3.81 GB
+  Eval  50/226 | Val Loss: 1.7987 | Perplexity: 6.04
+  Saved checkpoint to outputs-unsloth/checkpoint-50
+  Step 55/226 | Loss: 1.8915 | Grad: 0.7538 | LR: 1.59e-04 | Tok/s: 40 | Peak: 3.81 GB
+  Step 60/226 | Loss: 1.7593 | Grad: 0.7949 | LR: 1.55e-04 | Tok/s: 39 | Peak: 4.01 GB
+  Step 65/226 | Loss: 1.8600 | Grad: 0.7992 | LR: 1.50e-04 | Tok/s: 40 | Peak: 4.01 GB
+  Step 70/226 | Loss: 1.8430 | Grad: 0.7836 | LR: 1.45e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Step 75/226 | Loss: 1.8156 | Grad: 0.9476 | LR: 1.41e-04 | Tok/s: 43 | Peak: 4.01 GB
+  Step 80/226 | Loss: 1.7757 | Grad: 0.8811 | LR: 1.36e-04 | Tok/s: 40 | Peak: 4.01 GB
+  Step 85/226 | Loss: 1.6559 | Grad: 0.8785 | LR: 1.31e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Step 90/226 | Loss: 1.9701 | Grad: 0.8421 | LR: 1.27e-04 | Tok/s: 43 | Peak: 4.01 GB
+  Step 95/226 | Loss: 1.6827 | Grad: 0.7618 | LR: 1.22e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Step 100/226 | Loss: 1.7571 | Grad: 1.0234 | LR: 1.18e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Eval  100/226 | Val Loss: 1.7201 | Perplexity: 5.59
+  Saved checkpoint to outputs-unsloth/checkpoint-100
+  Step 105/226 | Loss: 1.5436 | Grad: 0.7255 | LR: 1.13e-04 | Tok/s: 43 | Peak: 4.01 GB
+  Step 110/226 | Loss: 1.8274 | Grad: 0.8244 | LR: 1.08e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Step 115/226 | Loss: 1.7686 | Grad: 0.8515 | LR: 1.04e-04 | Tok/s: 42 | Peak: 4.01 GB
+  Step 120/226 | Loss: 1.5753 | Grad: 0.8919 | LR: 9.91e-05 | Tok/s: 42 | Peak: 4.01 GB
+  Step 125/226 | Loss: 1.6010 | Grad: 0.8470 | LR: 9.44e-05 | Tok/s: 42 | Peak: 4.01 GB
+  Step 130/226 | Loss: 1.5810 | Grad: 1.0931 | LR: 8.98e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 135/226 | Loss: 1.5577 | Grad: 0.9994 | LR: 8.52e-05 | Tok/s: 41 | Peak: 4.01 GB
+  Step 140/226 | Loss: 1.6320 | Grad: 1.0350 | LR: 8.06e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 145/226 | Loss: 1.4536 | Grad: 0.9941 | LR: 7.59e-05 | Tok/s: 42 | Peak: 4.01 GB
+  Step 150/226 | Loss: 1.4438 | Grad: 1.1220 | LR: 7.13e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Eval  150/226 | Val Loss: 1.7111 | Perplexity: 5.54
+  Saved checkpoint to outputs-unsloth/checkpoint-150
+  Step 155/226 | Loss: 1.5552 | Grad: 1.1831 | LR: 6.67e-05 | Tok/s: 44 | Peak: 4.01 GB
+  Step 160/226 | Loss: 1.3333 | Grad: 1.0586 | LR: 6.20e-05 | Tok/s: 44 | Peak: 4.01 GB
+  Step 165/226 | Loss: 1.4837 | Grad: 1.2376 | LR: 5.74e-05 | Tok/s: 44 | Peak: 4.01 GB
+  Step 170/226 | Loss: 1.5601 | Grad: 1.1511 | LR: 5.28e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 175/226 | Loss: 1.3939 | Grad: 1.2262 | LR: 4.81e-05 | Tok/s: 42 | Peak: 4.01 GB
+  Step 180/226 | Loss: 1.4289 | Grad: 1.1216 | LR: 4.35e-05 | Tok/s: 42 | Peak: 4.01 GB
+  Step 185/226 | Loss: 1.5019 | Grad: 1.1596 | LR: 3.89e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 190/226 | Loss: 1.4581 | Grad: 1.3085 | LR: 3.43e-05 | Tok/s: 44 | Peak: 4.01 GB
+  Step 195/226 | Loss: 1.4741 | Grad: 1.2859 | LR: 2.96e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 200/226 | Loss: 1.4366 | Grad: 1.1830 | LR: 2.50e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Eval  200/226 | Val Loss: 1.7058 | Perplexity: 5.51
+  Saved checkpoint to outputs-unsloth/checkpoint-200
+  Step 205/226 | Loss: 1.5041 | Grad: 1.2820 | LR: 2.04e-05 | Tok/s: 45 | Peak: 4.01 GB
+  Step 210/226 | Loss: 1.4140 | Grad: 1.3094 | LR: 1.57e-05 | Tok/s: 43 | Peak: 4.01 GB
+  Step 215/226 | Loss: 1.4162 | Grad: 1.0595 | LR: 1.11e-05 | Tok/s: 44 | Peak: 4.01 GB
+  Step 220/226 | Loss: 1.4063 | Grad: 1.3398 | LR: 6.48e-06 | Tok/s: 44 | Peak: 4.01 GB
+  Step 225/226 | Loss: 1.5452 | Grad: 1.3268 | LR: 1.85e-06 | Tok/s: 43 | Peak: 4.01 GB
+  Step 226/226 | Loss: 1.4744 | Grad: 1.2873 | LR: 9.26e-07 | Tok/s: 43 | Peak: 4.01 GB
+
+Unsloth: Training complete! Avg loss: 1.6870 | Total time: 6512.7s | Steps: 226 | Tokens: 252112
+{'train_loss': 1.687007460905158, 'train_runtime': 6512.742408999999, 'train_steps': 226, 'trained_tokens': 252112, 'train_samples_per_second': 38.71057446577419, 'compile_enabled': True, 'compile_support_state': 'n/a', 'compile_reason': '', 'compile_policy_mode': 'best_effort', 'patch_mode': 'patched', 'compile_trace': None, 'compile_auto_tune_applied': [], 'memory_limits_applied': {'memory_limit_gb': 4.8676388864, 'wired_limit_gb': 4.8676388864, 'recommended_working_set_gb': 5.726633984}}
+Done! Adapter saved to ./fo-adapter-unsloth

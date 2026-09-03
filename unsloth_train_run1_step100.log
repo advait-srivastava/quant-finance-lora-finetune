@@ -1,0 +1,47 @@
+Base model : mlx-community/Qwen2.5-3B-Instruct-4bit
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 20821.15it/s]
+Unsloth: Loading mlx-community/Qwen2.5-3B-Instruct-4bit via mlx-lm...
+/Users/advaitsrivastava/unsloth312/lib/python3.12/site-packages/unsloth/__init__.py:88: UserWarning: Unsloth: 'mlx-community/Qwen2.5-3B-Instruct-4bit' is already quantized — using existing compatible MLX quantization.
+  return FastMLXModel.from_pretrained(*args, **kwargs)
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 190650.18it/s]
+Unsloth: LoRA applied — 29,933,568 trainable params (5.84% of 512,315,392 total)
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 452 examples [00:00, 2596.73 examples/s]Generating train split: 452 examples [00:00, 2590.15 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 57 examples [00:00, 38099.65 examples/s]
+Map:   0%|          | 0/452 [00:00<?, ? examples/s]Map: 100%|██████████| 452/452 [00:00<00:00, 4696.50 examples/s]
+Map:   0%|          | 0/57 [00:00<?, ? examples/s]Map: 100%|██████████| 57/57 [00:00<00:00, 23484.81 examples/s]
+Train: 452  Valid: 57
+Unsloth: train_on_responses_only enabled (452 batches prepared).
+Starting Unsloth LoRA fine-tuning...
+Unsloth: MLX Metal memory guard enabled (memory_limit=4.87 GB, wired_limit=4.87 GB).
+Unsloth: Using gradient checkpointing to reduce memory.
+Unsloth: CCE using quantized matmul (group_size=64, bits=4)
+Unsloth: Using CCE loss (runtime-cce) for memory-efficient training.
+Unsloth: Eval enabled every 50 steps (57 eval batches).
+Unsloth: Training for 226 steps, BS=1, grad_accum=4, seq_len=640
+Unsloth: Features: CCE, GC, compile, LR=linear, opt=adamw
+  Step 5/226 | Loss: 2.5404 | Grad: 1.4539 | LR: 9.09e-05 | Tok/s: 35 | Peak: 3.00 GB
+  Step 10/226 | Loss: 2.3569 | Grad: 0.5564 | LR: 1.82e-04 | Tok/s: 30 | Peak: 3.00 GB
+  Step 15/226 | Loss: 2.1809 | Grad: 0.5980 | LR: 1.96e-04 | Tok/s: 38 | Peak: 3.00 GB
+  Step 20/226 | Loss: 2.0787 | Grad: 0.6012 | LR: 1.92e-04 | Tok/s: 40 | Peak: 3.02 GB
+  Step 25/226 | Loss: 2.0519 | Grad: 0.7049 | LR: 1.87e-04 | Tok/s: 43 | Peak: 3.02 GB
+  Step 30/226 | Loss: 1.8558 | Grad: 0.6837 | LR: 1.82e-04 | Tok/s: 44 | Peak: 3.02 GB
+  Step 35/226 | Loss: 1.9495 | Grad: 0.7965 | LR: 1.78e-04 | Tok/s: 43 | Peak: 3.02 GB
+  Step 40/226 | Loss: 1.7994 | Grad: 3.0370 | LR: 1.73e-04 | Tok/s: 45 | Peak: 3.02 GB
+  Step 45/226 | Loss: 1.6039 | Grad: 0.6317 | LR: 1.69e-04 | Tok/s: 44 | Peak: 3.06 GB
+  Step 50/226 | Loss: 1.8439 | Grad: 0.6861 | LR: 1.64e-04 | Tok/s: 43 | Peak: 3.06 GB
+  Eval  50/226 | Val Loss: 1.7984 | Perplexity: 6.04
+  Saved checkpoint to outputs-unsloth/checkpoint-50
+  Step 55/226 | Loss: 1.8936 | Grad: 0.7553 | LR: 1.59e-04 | Tok/s: 44 | Peak: 3.06 GB
+  Step 60/226 | Loss: 2.0307 | Grad: 0.7721 | LR: 1.55e-04 | Tok/s: 44 | Peak: 3.06 GB
+  Step 65/226 | Loss: 1.6846 | Grad: 0.6756 | LR: 1.50e-04 | Tok/s: 42 | Peak: 3.06 GB
+  Step 70/226 | Loss: 1.7645 | Grad: 0.7590 | LR: 1.45e-04 | Tok/s: 42 | Peak: 3.06 GB
+  Step 75/226 | Loss: 1.7140 | Grad: 0.8121 | LR: 1.41e-04 | Tok/s: 42 | Peak: 3.06 GB
+  Step 80/226 | Loss: 1.8015 | Grad: 0.7941 | LR: 1.36e-04 | Tok/s: 40 | Peak: 3.06 GB
+  Step 85/226 | Loss: 1.6985 | Grad: 0.8145 | LR: 1.31e-04 | Tok/s: 38 | Peak: 3.06 GB
+  Step 90/226 | Loss: 1.7403 | Grad: 0.7691 | LR: 1.27e-04 | Tok/s: 37 | Peak: 3.06 GB
+  Step 95/226 | Loss: 1.7837 | Grad: 0.8276 | LR: 1.22e-04 | Tok/s: 37 | Peak: 3.06 GB
+  Step 100/226 | Loss: 1.7342 | Grad: 0.8024 | LR: 1.18e-04 | Tok/s: 41 | Peak: 3.06 GB
+  Eval  100/226 | Val Loss: 1.7132 | Perplexity: 5.55
+  Saved checkpoint to outputs-unsloth/checkpoint-100
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

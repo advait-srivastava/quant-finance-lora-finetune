@@ -1,0 +1,27 @@
+# Source PDFs and text extracted from them — copyrighted material, not redistributed
+papers/
+chunks.json
+
+# Trained adapters / checkpoints — large binaries, regenerate with the commands in README
+fo-adapter/
+fo-adapter-unsloth/
+outputs-unsloth/
+outputs-unsloth-run1/
+
+# Unrelated nested project (has its own git repo + live API credentials)
+groww/
+
+# Stray/broken file
+FinceptTerminal.dmg
+
+# Local tool config
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
