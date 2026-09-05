@@ -17,6 +17,13 @@ FinceptTerminal.dmg
 # Local tool config
 .claude/
 
+# Stray run logs — the three unsloth_*.log files are kept deliberately:
+# they are small and the README cites them as evidence of training results
+*.log
+!unsloth_train.log
+!unsloth_test.log
+!unsloth_train_run1_step100.log
+
 # Python
 __pycache__/
 *.pyc
